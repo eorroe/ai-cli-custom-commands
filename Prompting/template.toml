@@ -1,0 +1,20 @@
+description = "Manage and apply reusable prompt templates with AI-powered assistance."
+prompt = """
+The `/Template` command provides a dedicated workflow for managing reusable prompt templates within the `pe-cli` TUI. It addresses the inefficiency and error-proneness of manually editing or copy-pasting prompt structures, enabling users to define prompt logic once and dynamically inject data for rapid iteration and testing. This aligns with the OpenCode architecture of modular panes and agentic workflows.
+
+**Key Features:**
+- **Template Creation:** Analyze files to identify variable placeholders (e.g., `{{variable}}`) and save them as reusable templates in the History Vault using `pe template create <file>`.
+- **Template Rendering:** Render templates using external JSON/YAML data files or direct CLI variable inputs (`--var name=value`) via `pe template render <template_id> [data]`.
+- **TUI Integration:** Seamlessly browse, edit, and apply templates within the sidebar and editor panes.
+- **Variable Highlighting:** `Lip Gloss` colors `{{...}}` placeholders in the editor for clear visual distinction.
+- **Interactive Injection:** When a template lacks sufficient data, a TUI "Bubble" input form prompts for missing variables.
+- **Automated Extraction:** Ability to convert existing "static" prompts into templates by identifying common patterns.
+- **Template Sidebar:** A dedicated "Templates" tab in the TUI sidebar for browsing and managing saved prompt templates.
+
+**How to Use:**
+- **Create a template:** `pe template create /path/to/your/prompt.txt`
+- **Render a template:** `pe template render my-template-id --var user_name="Alice"`
+- **Interact via TUI:** Type `/Template` in the TUI command bar to access the template management interface.
+
+This command leverages core capabilities like `template-manager` for storage, `variable-extractor` for dynamic field detection, `template-renderer` for high-performance injection, and integrates with a TUI built using `Bubble Tea` and `Lip Gloss`.
+"""

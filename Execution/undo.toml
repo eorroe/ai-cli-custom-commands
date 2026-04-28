@@ -1,0 +1,3 @@
+description = "Undo last update (Must Use Strongest Model Unfortunately) ARGS: <FOLDER-FILE-NAME>"
+
+prompt = "Follow global gemini rule to restore {{args}}. Literally undo to the exact state from before the last change, without including any subsequent updates or interpretations"

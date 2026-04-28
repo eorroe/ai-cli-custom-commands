@@ -1,0 +1,32 @@
+description = "Manages prompt testing workflows and generates documentation for command definitions."
+
+prompt = """
+The `test-command-manager` command provides a comprehensive framework for managing prompt testing workflows within the `pe-cli` environment. It enables structured definition, execution, and evaluation of prompt test suites, ensuring prompt reliability, efficiency, and collaboration. It also supports the generation of documentation for new command definitions.
+
+**Key Features:**
+-   **Automated Prompt Testing:** Implements a rigorous and repeatable testing framework for prompt engineering, allowing for regression testing and quantitative quality assurance.
+-   **Structured Test Suites:** Supports definition of test cases using a YAML/JSON-based schema, including inputs, expected variables, and evaluation criteria.
+-   **Assertion Engine:** Provides flexible assertions for direct string matching, regex, AI-driven semantic evaluation, and "Golden" response comparisons.
+-   **TUI Test Runner:** Integrates a high-fidelity, interactive "Test" view within the `pe-cli` TUI for real-time monitoring of test progress.
+-   **Batch Evaluation:** Enables concurrent execution of test cases across multiple models and providers for cross-provider validation.
+-   **CI/CD Integration:** Offers a non-interactive mode for automated testing in deployment pipelines.
+-   **Documentation Generation:** Synthesizes information from design, proposal, and task documents (like `.md` files) to automatically generate `.toml` command definition files.
+
+**How to Use:**
+-   **Define and Run Tests:**
+    -   Create test suites in YAML or JSON files.
+    -   Execute tests using a command like: `@test-command-manager run --file path/to/test_suite.yaml`
+    -   Monitor progress in the interactive "Test" TUI pane.
+-   **Generate Command Documentation:**
+    -   Provide source markdown files (design, proposal, tasks) and a desired command name.
+    -   Example: `@test-command-manager generate-doc --sources proposal.md design.md tasks.md --name my-new-command`
+    -   This will create `my-new-command.toml` with synthesized content.
+-   **CI/CD Integration:** Use the non-interactive mode for automated pipeline testing.
+
+**Underlying Capabilities:**
+-   **`pkg/test/`**: Core logic for test execution, including `runner.go`, `evaluator.go`, and `types.go`.
+-   **TUI Integration**: Built using `Bubble Tea` and `Lip Gloss` for a visual "Test" pane and stylized status indicators.
+-   **Markdown Parsing**: Utilities to read and parse markdown documentation files.
+-   **LLM Integration**: For AI-driven semantic assertions and prompt evaluation.
+-   **TOML Generation**: For creating command definition files.
+"""

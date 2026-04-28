@@ -1,0 +1,20 @@
+description = "Find contradictions in plans ARGS: <PLAN-FILE-1> <PLAN-FILE-2>"
+
+prompt = """
+
+## Expected Format
+The command follows this format: `/plan-find-contradictions <PLAN-FILE-1> <PLAN-FILE-2>`
+
+* "Maintain High Fidelity": "NEVER summarize, paraphrase, or omit existing technical details, code blocks, or specific
+constraints. Every line of the original file must be preserved in its full fidelity unless the prompt
+explicitly mandate its removal or modification."
+
+# Behavior
+1. Find contradictions in <PLAN-FILE-1> that contradict what is in <PLAN-FILE-2>.
+2. In detail list and describe the contradictions found, and list what changes will be made.
+4. List out every line of text that will be removed from files so I can confirm whether losing certain lines is okay or must be maintained and avoid loss of content that may not be recovered.
+5. Ask for my confirmation to proceed with updates.
+6. When confirmed to update use write_file tool to update <PLAN-FILE-1> to not contradict <PLAN-FILE-2> Maintain everything else untouched as is..
+6. In detail describe the changes, list what was contradicting and list out what changes were made.
+
+"""

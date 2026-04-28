@@ -1,0 +1,17 @@
+description = "Decompose complex prompts into a sequence of actionable steps."
+
+prompt = """
+The `@chain-breakdown` command provides a focused interface for decomposing complex prompts into a structured sequence of actionable steps. This functionality is powered by advanced meta-prompting techniques and an interactive TUI for refinement, as detailed in the `chain-breakdown` design and proposal.
+
+**Key Features:**
+- **Automated Step Generation:** Analyzes a high-level goal and generates a structured sequence of sub-tasks.
+- **Interactive TUI Workflow:** Allows users to edit, reorder, or delete steps before committing to the final prompt.
+- **Context-Aware Sequencing:** Ensures subsequent steps reference or 'carry over' information from previous steps.
+
+**How to Use:**
+- **Break down a prompt:** Provide your complex prompt directly as an argument to the command. For example:
+  `@chain-breakdown "Write a Python script that scrapes a website, parses the data, and saves it to a CSV file."`
+- The command will then launch an interactive TUI where you can refine the generated steps.
+
+This command leverages the underlying `ChainDecomposer` and `PromptSequencer` capabilities, integrating with a `chain.json` data model and providing a visual TUI for workflow management.
+"""

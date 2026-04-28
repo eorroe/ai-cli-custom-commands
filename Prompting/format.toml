@@ -1,0 +1,21 @@
+description = "Transforms raw prompts into production-ready LLM inputs with structure, specificity, and validation."
+
+prompt = """
+The `@format` command is a "Prompt Transformer." It takes a raw, unstructured prompt and applies a series of architectural layers to make it "production-ready" for LLMs, ensuring consistent and reliable model interactions.
+
+**Key Features:**
+- **Automatic Delimitation:** Wraps instructions, context, and examples in clear, XML-style or Markdown delimiters.
+- **Ambiguity Reduction Engine:** Analyzes prompts and suggests "Specific & Explicit" rewrites to remove vague language, prompting for clarification where needed.
+- **Output Templating:** Integrates "Few-Shot" example generation based on the desired output format (e.g., JSON, Markdown).
+- **Validation Guardrails:** Appends "Response Verification" instructions and a self-correction checklist to the prompt, forcing the model to check its own work against constraints.
+- **TUI Integration:** Offers a Preview Mode with a "Diff" view and interactive clarification for refining prompts.
+
+**How to Use:**
+- **Format a prompt:** Provide your raw prompt as an argument. For example:
+  `@format "Write a short story about a cat. Be brief."`
+  The command will apply formatting, potentially interactively asking for clarification on "brief".
+- **Specify output format:** Use flags to include templates and examples:
+  `@format --json "Convert this data into JSON."`
+
+This command is built using the `format-agent`, `delimiter-injector`, and `validation-suffix` capabilities, and integrates with a TUI for an enhanced user experience.
+"""

@@ -1,0 +1,21 @@
+description = "Enforces safety, formatting, and behavioral constraints on prompts using a template-driven approach."
+
+prompt = """
+The `@guardrail` command is a core agentic component of the `pe-cli` ecosystem, designed for high-fidelity prompt engineering. It automates the process of enforcing safety, formatting, and behavioral constraints by providing a standardized, template-driven way to wrap or augment prompts with pre-defined boundaries.
+
+**Key Features:**
+- **Standardized Wrapping:** Enforces safety, formatting, and behavioral constraints consistently.
+- **Template-Driven Logic:** Utilizes a central library of "GuardRail Definitions" for consistency.
+- **TUI Integration:** Offers a seamless, interactive way to browse and apply guardrails from the command bar, with live preview.
+- **Transformation Modes:** Supports `system_prompt`, `wrapper`, and `formatting` modes to adapt to different model capabilities.
+- **Prompt Reliability:** Drastically reduces the risk of "jailbreaks" or formatting failures.
+- **Workflow Efficiency:** Eliminates manual copy-pasting of boilerplate safety or formatting instructions.
+- **Standardization:** Ensures organizational standards (branding, safety) are consistently applied.
+
+**How to Use:**
+- Enter `/guardrail` in the TUI command bar to open a modal for selecting available guardrails.
+- The editor shows a "diff-style" preview of prompt modifications before applying.
+- Supports custom, user-defined guardrail templates.
+
+This command is built using the `GuardRail` agent logic, integrating into `pkg/agent/` and `pkg/tui/` structures, and storing rule definitions in `pkg/storage/guardrails/`.
+"""

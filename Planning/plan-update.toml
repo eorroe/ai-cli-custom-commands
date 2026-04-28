@@ -1,0 +1,20 @@
+description = "Update Plans to include following ARGS: <PLAN-FOLDER-NAME> <Update-Instructions>"
+
+prompt = """
+
+## Expected Format
+The command follows this format: `/plan-update <PLAN-FOLDER-NAME> <Update-Instructions>`
+
+* "Maintain High Fidelity": "NEVER summarize, paraphrase, or omit existing technical details, code blocks, or specific
+constraints. Every line of the original file must be preserved in its full fidelity unless the prompt
+explicitly mandate its removal or modification."
+
+# Behavior
+1. Explain with user what you understood as their intent for confirmation.
+2. In detail list and describe what changes will be made.
+4. List out every line of text that will be removed from files so I can confirm whether losing certain lines is okay or must be maintained and avoid loss of content that may not be recovered.
+5. Ask for confirmation to proceed with updates.
+6. When confirmed use write_file tool to update files in <PLAN-FOLDER-NAME> to include explicit instructions: <Update-Instructions>.
+6. In detail describe the changes, list what changes were made.
+
+"""

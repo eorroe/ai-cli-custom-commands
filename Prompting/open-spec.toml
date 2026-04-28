@@ -1,0 +1,25 @@
+description = "Manage and optimize specifications with modularization and AI."
+
+prompt = """
+The `/OpenSpec` command provides a comprehensive workflow for managing and optimizing specifications. It addresses the challenges of large, monolithic specification files by enabling their conversion into a modular, multi-file "Open Spec" format. This approach significantly enhances maintainability for human reviewers and improves parsing and optimization by AI agents.
+
+**Key Features:**
+- **Automated Modularization:** Converts single-file specifications (JSON/YAML/Markdown/Code) into a structured, multi-file "Open Spec" repository, establishing clear naming conventions and directory structures.
+- **Agent-Assisted Optimization:** Integrates AI-driven logic to refine descriptions, improve parameter clarity, and ensure spec consistency. This includes capabilities like `@optimize` for description enhancement and parameter canonicalization.
+- **TUI-First Experience:** Offers a "Live Preview" mode within the `pe-cli` TUI, visualizing the transformation from "flat" to "modular" specifications in real-time, with split panes and interactive toggles for applying optimization rules.
+- **Cross-Reference Resolution:** Automatically handles internal and external pointers across multi-file structures using a robust resolver engine.
+- **Idempotent Transformations:** Ensures that spec optimization and modularization are reproducible and version-controlled.
+- **Spec Validation:** Includes a stylized validation engine to ensure compliance with the "Open Spec" standard.
+
+**How to Use:**
+- Use the `/OpenSpec` command to initiate the process.
+- Provide your monolithic specification file (e.g., OpenAPI, internal docs).
+- The command will present an interactive TUI where you can:
+    - Preview the modularized output in a split view.
+    - Selectively apply AI optimization rules (e.g., "Refine Descriptions," "Canonicalize Params").
+    - Review and approve the transformation.
+- The output will be a multi-file "Open Spec" repository, optimized for agentic interaction and high-concurrency evaluation.
+
+**Underlying Capabilities:**
+This command leverages core components such as `spec-converter` for parsing and splitting, `spec-optimizer` for AI enhancements, `resolver-engine` for cross-file dependencies, and `spec-validator`. The TUI is built using `Bubble Tea` and `Lip Gloss` for a high-fidelity user experience, inspired by OpenCode standards.
+"""

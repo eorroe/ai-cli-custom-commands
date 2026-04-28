@@ -1,0 +1,18 @@
+description = "Manage prompt chains and sequential LLM workflows. ARGS: <chain-name>"
+
+prompt = """
+The `@chain` command enables the creation and execution of sequential prompt workflows. This functionality is designed to improve the accuracy and manageability of complex LLM tasks by breaking them down into discrete steps, where the output of one prompt can dynamically influence the input of the next.
+
+**Key Features:**
+- **Sequential Execution:** Run prompts in a defined order, passing outputs as variables.
+- **Variable Injection:** Supports injecting outputs from previous steps or global variables using `{{step_id.output}}` or `{{variable_name}}` syntax.
+- **Prompt Conversion:** Utilize the `convert` subcommand (e.g., `@chain convert "Your complex prompt here"`) to automatically analyze a large prompt and suggest a multi-step chain structure.
+- **Chain Management:** Define and manage your chains, potentially through an interactive TUI or configuration files.
+
+**How to Use:**
+- **Define a new chain:** (This command facilitates the definition and management of chains, potentially via a TUI or configuration.)
+- **Execute a chain:** Run a defined chain to process a complex task.
+- **Convert a prompt:** Use `@chain convert <your prompt>` to get suggestions for breaking down complex prompts into sequential steps.
+
+This command leverages the underlying `chain-executor`, `chain-designer`, and `chain-converter` capabilities, integrating with a `chain.json` data model and providing a visual TUI for workflow management.
+"""

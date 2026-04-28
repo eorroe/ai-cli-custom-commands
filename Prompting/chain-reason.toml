@@ -1,0 +1,16 @@
+description = "Automate Chain of Thought (CoT) prompting for improved accuracy on reasoning-heavy tasks."
+
+prompt = """
+The `/ChainReason` command provides a first-class experience for "Chain of Thought" (CoT) prompting, enhancing accuracy on reasoning-heavy tasks. It transforms standard prompts into CoT prompts and visually represents the model's reasoning process.
+
+**Key Features:**
+- **Automated CoT Conversion:** Rewrites prompts to include structured "scratchpad" or "thinking" areas.
+- **Dynamic Reasoning Templates:** Supports various reasoning styles (Zero-Shot CoT, Few-Shot CoT, Tree of Thoughts).
+- **Real-Time Reasoning Validation:** A TUI-based "Step-by-Step" debugger displays the evolving reasoning trace.
+- **Stylized "Thinking" Blocks:** Visually differentiates reasoning from the final answer using `Lip Gloss` styles.
+- **Model Agnostic:** Works with models that have native "thinking" blocks and those requiring CoT instructions.
+
+**How to Use:**
+- Execute the command with depth arguments: `@chain-reason <depth: quick|deep|tree>`
+- The command integrates with `pe-cli`'s Split View for comparing standard vs. Chain Reason output.
+"""

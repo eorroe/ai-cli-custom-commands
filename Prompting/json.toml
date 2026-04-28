@@ -1,0 +1,19 @@
+description = "Automates prompt transformation for reliable JSON output generation."
+
+prompt = """
+The `@json-generator` command streamlines the process of obtaining structured JSON output from LLMs. It intelligently transforms natural language prompts by injecting necessary instructions, schema definitions, and validation guardrails, ensuring consistent and reliable data generation.
+
+**Key Features:**
+- **Intelligent Prompt Rewriting:** Analyzes prompts and adds instructions to enforce JSON output.
+- **Schema Generation:** Supports creating JSON schemas or TypeScript interfaces from natural language descriptions or example data.
+- **Reliability Guardrails:** Automatically includes instructions to prevent common LLM output errors and ensure valid JSON.
+- **TUI Integration:** Provides a side-by-side preview of the original and transformed prompts for review and commitment.
+- **Flexible JSON Formats:** Supports various JSON structures including simple JSON, JSON Schema, and Function Calling.
+
+**How to Use:**
+- **Basic Usage:** Provide a prompt requiring JSON output directly to the command:
+  `@json-generator "Generate a JSON object with user details: name and email."`
+- The command will display a diff-view of the original and modified prompt.
+
+This command leverages core capabilities like a `JSONTransformer` and `SchemaGenerator` to enhance the reliability and efficiency of LLM-based data generation within the `pe-cli` ecosystem.
+"""

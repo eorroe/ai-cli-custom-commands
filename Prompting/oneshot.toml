@@ -1,0 +1,24 @@
+description = "Process local files with LLMs using a single-turn prompt."
+
+prompt = """
+The `@oneshot` command streamlines the process of analyzing local files with LLMs by allowing users to pass a file path directly. This automates the manual task of copying file content into a prompt template, instead wrapping it into a structured, single-turn prompt for immediate model execution or editing.
+
+**Key Features:**
+- **File-to-Prompt Conversion:** Reads a specified local file and injects its content into a customizable one-shot template.
+- **Template Integration:** Supports user-defined "wrapper" templates (e.g., "Explain this code", "Summarize this document") for consistent prompt structuring.
+- **Immediate Execution or Editing:** The converted prompt can be immediately dispatched to a model or opened in the `pe edit` TUI for further refinement.
+- **Output Management:** The result of the one-shot run is automatically saved to the `history-vault`.
+- **File Type Detection:** Basic detection of file type (e.g., code, markdown) to inform prompt context.
+- **File Size/Token Limit Handling:** Includes checks for file size and token limits to prevent exceeding model context windows.
+
+**How to Use:**
+- **Basic Usage:** Execute the command with the path to your data file:
+  `@oneshot /path/to/your/file.txt`
+- **Specify a template:** Use the `--template` flag to choose a different wrapper:
+  `@oneshot /path/to/your/code.go --template refactor`
+- **Edit instead of executing:** Use the `--edit` flag to open the generated prompt in the `pe edit` TUI:
+  `@oneshot /path/to/your/document.md --edit`
+- **Specify model:** Override the default model for this run using the `--model` flag.
+
+This command is built using the `pkg/prompt/oneshot.go` logic for file reading and wrapping, integrated with `cmd/oneshot.go` for CLI parsing, and relies on `pkg/storage/templates.go` for managing wrapper templates. It supports immediate dispatch to LLM via `pkg/llm` or TUI editing.
+"""

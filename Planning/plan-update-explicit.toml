@@ -1,0 +1,16 @@
+description = "Make prompt more explicit ARGS: <CODE-FOLDER-NAME>"
+
+prompt = """
+
+Your task is to Update files in {{args}} find any instructions that are not explicit but implicit and rewrite them to be explicit. Look in between the lines not just as a whole but in parts to find implicitness. Break down each instruction into multiple explicit instructions.
+
+
+# Behavior
+1. Find any instructions that are not explicit but implicit within {{args}}. Look in between the lines not just as a whole but in parts to find implicitness.
+2. In detail list and describe what implicitness or ambiguity were found. Break down how each implicit or ambiguity found will be updated to be rewritten to be explicit. Format: "Implicit: [IMPLICIT TEXT FOUND] Explicit Rewrite: [REWRITTEN EXPLICIT TEXT]"
+4. Summarize findings and rewrites.
+5. Ask for confirmation to proceed with updates.
+6. When confirmed to update use write_file tool to Update files in {{args}} to replace implicit instructions with updated rewritten explicit instructions. Break down each instruction into multiple explicit instructions. Maintain everything else untouched as is.
+7. In detail describe the changes, list what changes were made.
+
+"""

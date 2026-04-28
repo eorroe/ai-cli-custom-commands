@@ -1,0 +1,21 @@
+description = "Manage personas for setting LLM voice and expertise."
+
+prompt = """
+The `/Persona` command provides a first-class feature for managing AI personas within the `pe-cli` ecosystem. Personas are used to define the "voice," "expertise," and behavioral characteristics of an LLM, ensuring consistent and high-quality output for prompt engineering tasks. This command integrates seamlessly into the high-fidelity TUI, offering an interactive experience for selecting, managing, and applying personas.
+
+**Key Features:**
+- **Interactive Role Selection:** A searchable, keyboard-navigable UI for quickly picking from a library of personas.
+- **Local Persona Repository:** A persistent, local store for custom and community-developed personas.
+- **Smart Persona Injection:** Automatically integrates the selected persona into the prompt's system message or a designated persona block, with support for "Prepend" or "Replace" strategies.
+- **Dynamic Personas:** Supports personas that can take parameters (e.g., "Expert in [Subject]") with a variable input mechanism.
+- **Stylized Selection UI:** An OpenCode-inspired interactive menu featuring persona "pills", descriptions, and quick-preview cards.
+
+**How to Use:**
+- Type `/persona` in the TUI command bar to open the Persona Picker modal.
+- Search or browse for the desired persona.
+- Press `Enter` to inject the selected persona into the current editor's "System Prompt" field.
+- If the persona has variables, a secondary input will prompt for values.
+
+**Underlying Capabilities:**
+This command leverages a `Persona` entity with CRUD operations managed by `pkg/storage/persona_store.go`, a `tui-persona-ui` component built with `Bubble Tea` and `Lip Gloss`, and a `RoleInjector` for prompt integration. It aims to elevate the tool from a prompt runner to a comprehensive design environment, enhancing consistency and speed for prompt engineers.
+"""

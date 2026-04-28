@@ -1,0 +1,19 @@
+description = "Make plans of current implementation ARGS: <plan-name> <plan-details>"
+
+prompt = """
+
+Proposal.md, design.md, tasks.md details the completed implementation, its design decisions, and the tasks that were executed to achieve it.
+
+## Expected Format
+The command follows this format: `/plan-create-current-implementation <plan-name> <plan-details>`
+
+## Behavior
+1. Explain with user what you understood as their intent for confirmation.
+2. You are not writing new implementation.
+3. You are to follow the global gemini rule to create 3 markdown file plan.
+4. Read entire codebase then use the write_file tool to create the proposal and design documents as forward-looking plans (as if the feature hasn't been built yet).
+5. Mark all checkboxes in tasks.md as complete ([x]) to reflect that the implementation is already finished.
+6. Make sure the output should frame the existing code/features as the result of this planned effort.
+7. Briefly Explain What Was Done.
+
+"""

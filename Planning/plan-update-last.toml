@@ -1,0 +1,18 @@
+description = "Update Plans to include last update ARGS: <CODE-FOLDER-NAME>"
+
+prompt = """
+
+* "Maintain High Fidelity": "NEVER summarize, paraphrase, or omit existing technical details, code blocks, or specific
+constraints. Every line of the original file must be preserved in its full fidelity unless the prompt
+explicitly mandate its removal or modification."
+
+# Behavior
+1. Find any instructions that are not explicit but implicit within {{args}}. Look in between the lines not just as a whole but in parts to find implicitness.
+2. In detail list and describe what implicitness or ambiguity were found.
+3. Break down how each implicit or ambiguity found will be updated to be rewritten to be explicit.
+4. List out every line of text that will be removed from files so I can confirm whether losing certain lines is okay or must be maintained and avoid loss of content that may not be recovered.
+5. Ask for confirmation to proceed with updates.
+6. When confirmed to update use write_file tool to Update files in {{args}} with rewritten explicit instructions. Break down each instruction into multiple explicit instructions. Maintain everything else untouched as is.
+7. In detail describe the changes, list what changes were made.
+
+"""

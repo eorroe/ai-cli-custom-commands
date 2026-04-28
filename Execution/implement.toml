@@ -1,0 +1,12 @@
+description = "Implement following plan in 1 execution ARGS: <PLAN-FOLDER-NAME>"
+
+prompt = """
+
+# Behavior
+1. Read and understand the plan and intent behind the plan of <PLAN-FOLDER-NAME>
+2. In detail explain what you understand about the plan.
+3. Ask for confirmation to proceed with executing plan.
+4. When confirmed Proceed to implement <PLAN-FOLDER-NAME> All in 1 execution. Only respond output when completely finished implementation.
+5. In detail describe the changes, list what changes were made.
+
+"""

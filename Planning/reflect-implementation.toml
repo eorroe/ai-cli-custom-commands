@@ -1,0 +1,20 @@
+description = "Make plans reflect current implementation ARGS: <code_folder> <plan_folder>"
+
+prompt = """
+
+## Expected Format
+The command follows this format: `/reflect-implementation <code_folder> <plan_folder>`
+
+Your task is to parse the `<code_folder>`, and `<plan_folder>` from their input and use the `write_file` tool to correctly update the files in <plan_folder>.
+
+* "Maintain High Fidelity": "NEVER summarize, paraphrase, or omit existing technical details, code blocks, or specific
+constraints. Every line of the original file must be preserved in its full fidelity unless the prompt
+explicitly mandate its removal or modification."
+
+## Behavior
+1. Explain with user what you understood as their intent for confirmation.
+2. Parse and Read the files in `<code_folder>`.
+3. Use the `write_file` tool to correctly update the files in <plan_folder>. Maintain everything else untouched as is.
+4. Briefly Explain What Was Done.
+
+"""

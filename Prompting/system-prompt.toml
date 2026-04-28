@@ -1,0 +1,22 @@
+description = "Manages system prompts with AI-driven optimization and a TUI workspace."
+
+prompt = """
+The `/SystemPrompt` command provides a dedicated, agentic workflow within the `pe-cli` TUI for generating, evaluating, and optimizing system-level instructions. It addresses the difficulty of writing, versioning, and iterating on system prompts, which are the foundational "DNA" of LLM behavior. This aligns with the OpenCode architecture of modular panes and agentic workflows.
+
+**Key Features:**
+- **Structured System Prompt Authoring:** A multi-step TUI wizard for defining personas, roles, goals, constraints, and styles.
+- **AI-Driven Optimization:** Utilizes the `@refine-system` agent to analyze model outputs and suggest improvements based on failure cases.
+- **Visual Validation:** A "Constraint Heatmap" visually shows LLM adherence to system prompt constraints.
+- **Modular Design:** Aligns with OpenCode architecture with modular panes for Version History and reusable Constraint Modules.
+- **Interactive TUI Workspace:** Features a three-pane layout (Editor, Validation, Modules) and command bar support for commands like `/SystemPrompt load <id>`, `/SystemPrompt refine`, and `/SystemPrompt compare`.
+- **Constraint Vault:** A searchable library of common system prompt modules for easy injection.
+
+**How to Use:**
+- Use the `/SystemPrompt` command to initiate the process.
+- The command will present an interactive TUI where you can:
+    - Define personas, constraints, and operational goals.
+    - Use the `@refine-system` agent for feedback-driven optimization.
+    - Visualize adherence with the "Constraint Heatmap".
+
+This command leverages core components such as `pkg/system/` for prompt construction, `pkg/agent/refine_system.go` for agent logic, and `pkg/tui/views/system_view.go` for the TUI implementation.
+"""

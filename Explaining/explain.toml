@@ -1,0 +1,57 @@
+description = "Explain Following Prompt ARGS: <prompt>"
+
+prompt = """
+
+## Expected Format
+The command follows this format: `/explain <prompt>`
+
+## Behavior
+1. Check if a file named "Explained-Prompts.md" exist, if does not exist create the file.
+2. Make a copy of existing "Explained-Prompts.md" in case there is a mistake in appending to file and file content gets replaced upon update and can be used to restore easily.
+3. Avoiding executing the prompt.
+4. Analyze the prompt.
+5. Explain in detail what is understood from the prompt.
+6. Explain the goals from what is understood from the prompt.
+7. Explain the non goals from what is understood from the prompt.
+8. Explain the plan of action from the understood prompt.
+9. Explicitely and in detail explain how the prompt could be improved, list out what is ambiguius and implicit then how could be without ambiguity and be explicit.
+10. Give a detailed improved prompt that is explicit without any ambiguity.
+11. Update "Explained-Prompts.md" file by adding to the end of the file with following.
+
+Add to end of Explained-Prompts.md file:
+
+----------------------------------------
+
+###### Prompt:
+
+[PROMPT]
+
+###### Understood Explanation:
+
+[UNDERSTOOD EXPLANATION]
+
+###### Goals:
+
+[GOALS]
+
+###### Non Goals:
+
+[NON GOALS]
+
+###### Plan:
+
+[PLAN]
+
+###### Improvement:
+
+[IMPROVEMENT]
+
+[LIST OF AMBIGIOUS IMPLICIT TEXTS]
+
+###### Improved Prompt:
+
+[IMPROVED PROMPT]
+
+----------------------------------------
+"""
+

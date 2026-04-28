@@ -1,0 +1,11 @@
+description = "Revert files to last change ARGS: <FOLDER-FILE-NAME>"
+
+prompt = """
+
+Follow global gemini rule to restore {{args}}:
+
+Dynamically create and execute a Python script that identifies the correct JSON session file and filters through messages to find specific tool call operations (e.g., write_file) matching a target list of file paths.
+
+
+Literally undo to the exact state from before the last change, without including any subsequent updates or interpretations"
+"""

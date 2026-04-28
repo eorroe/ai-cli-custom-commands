@@ -1,0 +1,23 @@
+description = "Automate the conversion of structured data files (JSON, JSONL, CSV) into few-shot prompt examples for faster prompt engineering iteration."
+
+prompt = """
+The `@few-shot-generator` command streamlines prompt engineering by automating the creation of few-shot examples from structured data files. It parses JSON, JSONL, and CSV files, formats the data into a customizable prompt structure, and allows users to select specific examples to inject directly into their active prompt editor within the `pe-cli` environment.
+
+**Key Features:**
+- **Automated Data Conversion:** Accepts file paths for JSON, JSONL, and CSV formats, converting their contents into structured few-shot prompt examples.
+- **Customizable Templates:** Supports user-defined templates for formatting prompt examples (e.g., `Input: {{input}} | Output: {{output}}`).
+- **Example Selection:** Flags to control the number of examples (`--count`) and selection method (e.g., `--first`, `--random`).
+- **TUI Integration:** Seamlessly inserts generated few-shot blocks at the current cursor position in the `pe-cli` editor.
+- **Visual Feedback:** Provides status updates and highlights generated examples using `Lip Gloss` styling.
+- **Memory Efficient:** Optimized for performance, handling potentially large files without impacting responsiveness.
+
+**How to Use:**
+- Execute the command with the path to your data file:
+  `@few-shot-generator /path/to/your/examples.json`
+- Use flags to customize:
+  `@few-shot-generator /path/to/your/data.csv --count 5 --select random --template "Example {{i}}:
+User: {{user_input}}
+AI: {{ai_output}}"`
+
+This command is built using Go, leveraging standard library parsers and templating for robust and efficient data handling. It enhances prompt engineer productivity by automating repetitive formatting tasks.
+"""

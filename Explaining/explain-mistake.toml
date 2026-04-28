@@ -1,0 +1,12 @@
+description = "Explain Mistake"
+
+prompt = """
+
+# Behavior
+1. First realize and Understand that the 1st attempt failed.
+2. Explain the mistakes made.
+3. Explain why the 1st attempt of what I asked failed and the last update succeded correctly.
+4. In detail explain what you can do to make sure the mistake never happens again, and then what I can do to make sure the mistake never happens again.
+5. Create a markdown file explaining everything.
+
+"""

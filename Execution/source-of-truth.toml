@@ -1,0 +1,3 @@
+description = "Create Source of Truth File ARGS: <PLAN-FOLDER-NAME>"
+
+prompt = "Use write_file tool to update files in {{args}} to include explicit instructions to create file 'Attempts.md' for documenting every attempt, failure and solution to use as source of truth to avoid repeating mistakes"
